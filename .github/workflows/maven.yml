@@ -4,7 +4,6 @@ jobs:
   oracle-db-free:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - uses: gvenzl/oracle-xe:latest
         with:
           container-name: oracledb

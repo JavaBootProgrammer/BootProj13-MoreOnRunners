@@ -12,6 +12,7 @@ jobs:
           tag: slim
           app-user: test
           oracle-user-password: test
+          APP_USER_PASSWORD: test
           java-version: '17'
           distribution: 'temurin'
       - name: Run the Maven verify phase

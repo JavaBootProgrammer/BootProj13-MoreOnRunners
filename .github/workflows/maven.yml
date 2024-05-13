@@ -5,13 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: gvenzl/setup-oracle-free@v1
+      - uses: gvenzl/oracle-xe:latest
         with:
           container-name: oracledb
           container-runtime: podman
           tag: slim
-          APP_USER: my_user
-          APP_USER_PASSWORD: my_password_which_I_really_should_change
+          ORACLE_RANDOM_PASSWORD: true
+          APP_USER: test
+          APP_USER_PASSWORD: test
           java-version: '17'
           distribution: 'temurin'
       - name: Run the Maven verify phase

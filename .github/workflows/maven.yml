@@ -12,7 +12,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: 'Check out repository'
-        uses: actions/checkout@v4
         run: $JAVA_HOME_21_X64/bin/java --show-version src/ListOpenJavaDevelopmentKits.java ${{ github.event.inputs.name }}
       - name: 'Set up JDK'
         id: setup

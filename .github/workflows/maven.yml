@@ -4,7 +4,7 @@ jobs:
   oracle-db-free:
     runs-on: ubuntu-latest
     steps:
-      - uses: gvenzl/oracle-xe:latest
+      - uses: gvenzl/oracle-xe:11-slim
         with:
           container-name: oracledb
           container-runtime: podman
